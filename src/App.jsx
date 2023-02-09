@@ -1,7 +1,12 @@
 import './App.css';
+import Dashboard from './components/Dashboard';
 
 function App() {
-  return <div>IP Address Tracker</div>;
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
 }
 
 export default App;
