@@ -15,6 +15,25 @@ const Dashboard = () => {
           <img src="/public/icon-arrow.svg" alt="Arrow icon" />
         </button>
       </form>
+
+      <div className="outputBox">
+        <div>
+          <div className="outputHeader">IP ADDRESS</div>
+          <div className="outputValue">192.212.174.101</div>
+        </div>
+        <div>
+          <div className="outputHeader">LOCATION</div>
+          <div className="outputValue">Brooklyn, NY 10001</div>
+        </div>
+        <div>
+          <div className="outputHeader">TIMEZONE</div>
+          <div className="outputValue">UTC -05:00</div>
+        </div>
+        <div>
+          <div className="outputHeader">ISP</div>
+          <div className="outputValue">SpaceX Starlink</div>
+        </div>
+      </div>
     </div>
   );
 };

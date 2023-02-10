@@ -50,3 +50,35 @@ button {
 ::-ms-input-placeholder { /* Microsoft Edge */
  color: #bbb;
 }
+
+.outputBox {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.outputBox>div {
+  text-align: left;
+  width: 25%;
+}
+
+.outputBox>div:nth-child(2), .outputBox>div:nth-child(3), .outputBox>div:nth-child(4) {
+  border-left: 1px solid #ccc;
+  padding-left: 30px;
+}
+
+.outputHeader {
+  color: #aaa;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.outputValue {
+  font-weight: 500;
+  font-size: 22px;
+}
