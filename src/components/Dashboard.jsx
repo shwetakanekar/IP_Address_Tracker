@@ -12,7 +12,7 @@ const Dashboard = () => {
           placeholder="Search for any IP address or domain"
         />
         <button type="submit">
-          <img src="/public/icon-arrow.svg" alt="Arrow icon" />
+          <img src="/icon-arrow.svg" alt="Arrow icon" />
         </button>
       </form>
 
