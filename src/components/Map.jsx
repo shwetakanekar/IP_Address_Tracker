@@ -15,7 +15,8 @@ Leaflet.Icon.Default.mergeOptions({
 const MapComponent = () => {
   const containerStyle = {
     width: '100%',
-    height: 'calc(100vh - 240px)',
+    height: 'calc(100vh - 260px)',
+    minHeight: '500px',
   };
 
   const position = [51.505, -0.09];
