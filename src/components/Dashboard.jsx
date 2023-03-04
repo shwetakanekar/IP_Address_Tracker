@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Dashboard = () => {
+const Dashboard = ({ handleIpChange }) => {
   return (
     <div className="dashboard">
       <h1 className="header">IP Address Tracker</h1>
-      <form>
+      <form onSubmit={(e) => handleIpChange(e)}>
         <input
           type="text"
           name="ipAddress"
