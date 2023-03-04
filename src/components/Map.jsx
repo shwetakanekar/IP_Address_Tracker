@@ -18,20 +18,7 @@ function MyComponent(props) {
   return null;
 }
 
-const MapComponent = ({ ipAddress }) => {
-  const [position, setPosition] = useState([51.505, -0.09]);
-
-  const getPosition = (ipAddress) => {
-    console.log('getPosition ', ipAddress);
-    // call API to get the new position
-    setPosition((prevState) => [prevState[0] + 0.001, prevState[1] + 0.00001]);
-    console.log('getPosition ', position);
-  };
-
-  useEffect(() => {
-    getPosition(ipAddress);
-  }, [ipAddress]);
-
+const MapComponent = ({ position }) => {
   const containerStyle = {
     width: '100%',
     height: 'calc(100vh - 260px)',
@@ -51,9 +38,7 @@ const MapComponent = ({ ipAddress }) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={position}>
-        <Popup>Hi</Popup>
-      </Marker>
+      <Marker position={position}></Marker>
     </MapContainer>
   );
 };
