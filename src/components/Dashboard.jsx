@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Dashboard = ({ handleIpChange }) => {
+const Dashboard = ({ handleIpChange, ipAddress, data }) => {
   return (
     <div className="dashboard">
       <h1 className="header">IP Address Tracker</h1>
@@ -19,19 +19,22 @@ const Dashboard = ({ handleIpChange }) => {
       <div className="outputBox">
         <div>
           <div className="outputHeader">IP ADDRESS</div>
-          <div className="outputValue">192.212.174.101</div>
+          <div className="outputValue">{ipAddress}</div>
         </div>
         <div>
           <div className="outputHeader">LOCATION</div>
-          <div className="outputValue">Brooklyn, NY 10001</div>
+          <div className="outputValue">
+            {data.location.region}, {data.location.city},{' '}
+            {data.location.postalCode}
+          </div>
         </div>
         <div>
           <div className="outputHeader">TIMEZONE</div>
-          <div className="outputValue">UTC -05:00</div>
+          <div className="outputValue">UTC {data.location.timezone}</div>
         </div>
         <div>
           <div className="outputHeader">ISP</div>
-          <div className="outputValue">SpaceX Starlink</div>
+          <div className="outputValue">{data.isp}</div>
         </div>
       </div>
     </div>
